@@ -81,6 +81,21 @@ jQuery(document).ready(function () {
 
         });
     });
+    
+    jQuery('.mole').hover(function () {
+        var bonk = $("#bonk")[0];
+        bonk.play();
+        jQuery(this).css('background-image', 'url(hurt.png)');
+        jQuery(this).stop().animate({ 'top': '100%' }, 300, function () {
+
+            add = add - (-1);
+            jQuery('.score').html(name + ' Score: ' + add);
+            jQuery(this).css('background-image', 'url(normal.png)');
+            jQuery(this).animate({ 'top': '0%' }, 5000);
+
+        });
+    });
+
 
 
 
