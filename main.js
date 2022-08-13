@@ -68,7 +68,7 @@ jQuery(document).ready(function () {
 
     })
 
-    jQuery('.mole').click(function () {
+    jQuery('.mole').hover(function () {
         var bonk = $("#bonk")[0];
         bonk.play();
         jQuery(this).css('background-image', 'url(hurt.png)');
